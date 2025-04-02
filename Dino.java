@@ -1,7 +1,7 @@
 public class Dino{
-  private int age;
-  private String name;
-  private String era; 
+  protected int age;
+  protected String name;
+  protected String era; 
 
 public Dino(int a, String n, String e){
 	age = a;
