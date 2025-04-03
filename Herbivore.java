@@ -4,7 +4,7 @@ public class Herbivore extends Dino{
     public Herbivore(int a, String n, String e, String i){
       super(a, n, e);
       info = i;
-  }
+  }        
   
   public String getInfo(){
       Return info; 

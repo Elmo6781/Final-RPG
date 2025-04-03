@@ -2,8 +2,8 @@ public class Carnivore extends Dino{
     private String info;
 
     public Carnivore(int a, String n, String e, String i){
-        super(a, n, e);
-        info = i;
+        super(a, n, e);    
+        info = i;   
     }
     
     public String getInfo(){
