@@ -1,10 +1,10 @@
-public class Herbivore extends Dino{
+public class Amphibian extends Dino{
     private String info; 
   
-    public Herbivore(int a, String n, String e, String i){
+    public Amphibian(int a, String n, String e, String i){
       super(a, n, e);
       info = i;
-  }        
+  }
   
   public String getInfo(){
       return info; 

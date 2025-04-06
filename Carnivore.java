@@ -7,10 +7,10 @@ public class Carnivore extends Dino{
     }
     
     public String getInfo(){
-        Return info; 
+        return info; 
     }
     public void setInfo(int newI){
-        Info = newI; 
+        info = newI; 
     }
     @Override         
     public String toString(){
