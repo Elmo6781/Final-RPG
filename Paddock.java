@@ -3,6 +3,8 @@ public class Paddock extends Park{
     private String security;
     private String trainer;
     private String passcode;
+    private double brain_activity;
+    private double heart_rate;
 
 
     public Paddock(Dino D, String s, String t, String p){
@@ -11,8 +13,22 @@ public class Paddock extends Park{
         trainer = t;
         passcode = p;
     }
+    /* Enter the value A */
+    public String tranquilize_dinosaur(Dino dino) {
+        brain_activity = 23.0;
+        
 
 
+        return "";
+
+    }
+
+
+
+
+
+    /* Methods to obtain primary information like attributes of the dinos in the paddoks
+    */
     public String ToString(){
         return"";
 
