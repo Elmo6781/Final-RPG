@@ -13,6 +13,7 @@ public class Paddock extends Park{
         trainer = t;
         passcode = p;
     }
+    
     /* Enter the value A */
     public String tranquilize_dinosaur(Dino dino) {
         brain_activity = 23.0;
