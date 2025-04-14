@@ -1,5 +1,3 @@
-import java.util.Scanner;
-
 public class Main{
     public static void main(String[] args){
 
@@ -17,12 +15,13 @@ public class Main{
         System.out.println("-");
         System.out.println();
         System.out.println("Enter 1 to move left, 2 to move right, 3 to move up, 4 to move down");
-        int respone =  Integer.parseInt(in.nextLine());
+        
 
         boolean movement = false;
         while(!movement)
         {
-            
+            int response =  Integer.parseInt(in.nextLine());
+
         }
 
 
@@ -32,6 +31,13 @@ public class Main{
 
 
 
+
         
+    }
+
+    public static String getResponse(int userResponse){
+        if(userResponse == 1){
+            
+        }
     }
 }
