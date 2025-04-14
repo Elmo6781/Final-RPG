@@ -33,6 +33,11 @@ public class Main{
 
 
         
+<<<<<<< HEAD
+=======
+        
+
+>>>>>>> 80457db (main change)
     }
 
     public static String getResponse(int userResponse){
