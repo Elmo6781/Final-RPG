@@ -172,9 +172,9 @@ public class Create {
         for (int i = 0; i < park.length; i++) {
             for (int j = 0; j < park[i].length; j++) {
                 if (park[i][j] == null) {
-                    System.out.print("[     ] ");
+                    System.out.print("[ ]");
                 } else {
-                    System.out.print("[" + park[i][j] + "] ");
+                    System.out.print("[" + park[i][j] + "]");
                 }
             }
             System.out.println(); // Move to next line after each row
@@ -190,8 +190,8 @@ public class Create {
         return locations;
     }
     public static void main(String[] args) {
-        String[][] offpark = new String[20][20];
-        String[] locations = {"Griffindor", "Ravenclaw", "Hufflepuff", "Slytherin"};
+        String[][] offpark = new String[15][15];
+        String[] locations = {"G", "R", "H", "S"};
 
         Create test = new Create(offpark, locations );
         offpark = test.PopulateArray();
