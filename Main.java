@@ -6,8 +6,8 @@ public class Main{
         Scanner in = new Scanner(System.in);
         String[] buildings = {"I", "P", "R","M"};
         String[][] P = new String[20][20];
-        int xPosition = (int) Math.random()*P.length;
-        int yPosition = (int) Math.random()*P[0].length;
+        int PositionRow  = (int) Math.random()*P.length;
+        int PositionCol  = (int) Math.random()*P[0].length;
 
         
         Create gamePark = new Create(P, buildings);

@@ -9,7 +9,7 @@ public class Herbivore extends Dino{
   public String getInfo(){
       return info; 
   }
-  public void setInfo(int newI){
+  public void setInfo(String newI){
       info = newI; 
   }
   @Override

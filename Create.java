@@ -198,6 +198,13 @@ public class Create {
         test.printPark(offpark);
     }
 
+    public Park[][] Translate(String[][] stringMap)
+    {
+        
+        
+        return null;
+    }
+
     
     
 }
