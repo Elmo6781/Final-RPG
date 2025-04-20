@@ -1,20 +1,5 @@
 public class Herbivore extends Dino{
-    private String info; 
-  
-    public Herbivore(int a, String n, String e, String i){
-      super(a, n, e);
-      info = i;
-  }        
-  
-  public String getInfo(){
-      return info; 
-  }
-  public void setInfo(String newI){
-      info = newI; 
-  }
-  @Override
-  public String toString(){
-      return "Welcome to the " + name + " paddock! This dinosaur is " + age + " years old originating from the " + era + "!" + info;
-  }
+    public Herbivore(String age,String occurrence_no,String name,String era,String diet,String type,String length_m,String max_ma,String min_ma, String region, String lng,String  lat, String dinoClass, String  family)
+    {super(age, occurrence_no, name, era, diet, type, length_m, max_ma, min_ma, region, lng, lat, dinoClass, family);}
 }
   

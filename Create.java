@@ -191,19 +191,13 @@ public class Create {
     }
     public static void main(String[] args) {
         String[][] offpark = new String[15][15];
-        String[] locations = {"G", "R", "H", "S"};
+        String[] locations = {"P", "R", "H", "S"};
 
         Create test = new Create(offpark, locations );
         offpark = test.PopulateArray();
         test.printPark(offpark);
     }
 
-    public Park[][] Translate(String[][] stringMap)
-    {
-        
-        
-        return null;
-    }
 
     
     
