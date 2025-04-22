@@ -734,7 +734,7 @@ occurrence_no,name,diet,type,length_m,max_ma,min_ma,region,lng,lat,class,family
 481995,Diplodocus,herbivorous,sauropod,26.0,157.3,145.0,Colorado,-105.193703,38.544998,Saurischia,Diplodocidae
 481999,Diplodocus,herbivorous,sauropod,26.0,157.3,145.0,Colorado,-105.231598,38.546501,Saurischia,Diplodocidae
 482005,Diplodocus,herbivorous,sauropod,26.0,157.3,145.0,Colorado,-105.210602,38.5168,Saurischia,Diplodocidae
-482007,Torvosaurus,carnivorous,large theropod,10.0,157.3,152.1,Colorado,-105.210602,38.5168,Saurischia,Megalosauridae
+482007,Torvosaurus,carnivorous,large theropod,10.0,157.3,152.1,Colorado,-105.210602,38.5168,Saurischia,Megalosauridae 
 482010,Allosaurus,carnivorous,large theropod,12.0,157.3,152.1,Colorado,-105.210602,38.5168,Saurischia,Allosauridae
 482022,Neuquenraptor,,,,93.5,85.8,Neuquén,-69.550003,-38.900002,Saurischia,Dromaeosauridae
 482024,Byronosaurus,,,,83.6,66.0,Omnogov,100.901947,43.664444,Saurischia,Troodontidae

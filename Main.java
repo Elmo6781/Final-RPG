@@ -9,7 +9,15 @@ public class Main{
         Scanner in = new Scanner(System.in);
         Park[][] game = new Park[25][25];
         String[] testSubjects = {"P", "I", "L", "R"};
+        String[] trainers = {"Owen Grady", "Ash Ketchum", "Dr Herny Wu", "Saurya Bachala"};
         Create translatePark = new Create(new String[25][25], args);
+        DinoDownloader statsSheet = new DinoDownloader();
+        Dino check = new Dino();
+        Dino[] dinoList =  check.createListDino();
+
+
+
+        String[][] data = statsSheet.readCSV("/workspaces/Final-RPG/dinosaurs.csv");
         String[][] arrayToBeTranslated = translatePark.PopulateArray();
         for(int i = 0; i<arrayToBeTranslated.length; i++)
         {
@@ -19,10 +27,11 @@ public class Main{
                 {
                     if (arrayToBeTranslated[i][j].equals(testSubjects[0]))
                     {
-
+                        game[i][j] = new Paddock(dinoList[(int) (Math.random()*dinoList.length)], trainers[(int) (Math.random()*trainers.length)], "9");
                     } 
                     else if (arrayToBeTranslated[i][j].equals(testSubjects[1]))
                     {
+                        game[i][j] = 
 
                     } 
                     else if(arrayToBeTranslated[i][j].equals(testSubjects[2]))

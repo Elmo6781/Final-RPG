@@ -35,6 +35,23 @@ public class Dino{
 	this.family = family;
   }
 
+  public Dino(){}
+
+  public Dino[] createListDino()
+  {
+    DinoDownloader useTest = new DinoDownloader();
+    String[][] database = useTest.readCSV("/workspaces/Final-RPG/dinosaurs.csv");
+    Dino[] finalList = new Dino[database.length];
+    for(int i = 0; i < database.length; i++)
+    {
+      finalList[i] = new Dino("9", database[i][0], database[i][1], database[i][2], database[i][3], database[i][4], database[i][5], database[i][6], database[i][7], database[i][8], database[i][9], database[i][10], database[i][11], database[i][12]);
+    }
+  
+
+
+    return null;
+  }
+
 
 
   public String getAge() {
