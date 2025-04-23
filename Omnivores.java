@@ -1,10 +1,5 @@
-public class Amphibian extends Dino{
- public Amphibian(String age,String occurrence_no,String name,String era,String diet,String type,String length_m,String max_ma,String min_ma, String region, String lng,String  lat, String dinoClass, String  family)
-<<<<<<< HEAD
- {
-    super(age, occurrence_no, name, era, diet, type, length_m, max_ma, min_ma, region, lng, lat, dinoClass, family);
-}
-=======
+public class Omnivores extends Dino{
+ public Omnivores(String age,String occurrence_no,String name,String era,String diet,String type,String length_m,String max_ma,String min_ma, String region, String lng,String  lat, String dinoClass, String  family)
  {super(age, occurrence_no, name, era, diet, type, length_m, max_ma, min_ma, region, lng, lat, dinoClass, family);}
 
  public String toString(){
@@ -17,6 +12,6 @@ public class Amphibian extends Dino{
         "🍽 Diet: " + diet + "\n" +
         "🕰 Time Range: " + min_ma + " to " + max_ma + " million years ago" + "\n";
  }
->>>>>>> refs/remotes/origin/main
+
 }
   
