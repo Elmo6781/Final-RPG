@@ -140,6 +140,7 @@ public class Main{
         boolean movement = false;
         int positionX = 0;
         int positionY = 0;
+        int numSpotsVisited = 0;
         // write a program that uses variable position x to move left and right, poistion y to move up and down 
         // The intial position is [0,0]   ask for user input 1 for up 2 for down 3 for left and 4 for right
         // watches out for put of bound err0rs
@@ -204,6 +205,17 @@ public class Main{
                     else{positionY--;}
                 }
 
+            }
+            if (game[positionY][positionX] != null){
+                if(!game[positionY][positionX].getVisited())
+                {
+                    game[positionY][positionX].hasVisited();
+                    numSpotsVisited++;
+                    game[positionY][positionX].toString();
+                    System.out.println();
+                    System.out.println();
+                    System.out.println();
+                }
             }
 
 
