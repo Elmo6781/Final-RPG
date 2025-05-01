@@ -49,7 +49,10 @@ public class Dino{
   
 
 
-    return null;
+    return finalList;
+  }
+  public void addedtoDatabse(){
+    System.out.println("A carnivore has been exported to the map!!!!");
   }
 
 
@@ -219,6 +222,27 @@ public class Dino{
   public void setFamily(String family) {
 	this.family = family;
   }
+  
+  @Override
+public String toString() {
+    return "🦕 Dino Information 🦖\n" +
+           "------------------------\n" +
+           "Name: " + name + "\n" +
+           "Age: " + age + "\n" +
+           "Era: " + era + "\n" +
+           "Diet: " + diet + "\n" +
+           "Type: " + type + "\n" +
+           "Length (m): " + length_m + "\n" +
+           "Class: " + dinoClass + "\n" +
+           "Family: " + family + "\n" +
+           "Region: " + region + "\n" +
+           "Latitude: " + lat + "\n" +
+           "Longitude: " + lng + "\n" +
+           "Min MA: " + min_ma + "\n" +
+           "Max MA: " + max_ma + "\n" +
+           "Occurrence #: " + occurrence_no + "\n";
+}
+
 
 
   

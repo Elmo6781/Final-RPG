@@ -12,6 +12,9 @@ public class Omnivores extends Dino{
         "🍽 Diet: " + diet + "\n" +
         "🕰 Time Range: " + min_ma + " to " + max_ma + " million years ago" + "\n";
  }
+ public void addedtoDatabse(){
+    System.out.println("An omnivore has been exported to the map!!!!");
+}
 
 }
   

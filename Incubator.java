@@ -10,6 +10,14 @@ public class Incubator extends Park
         temp = t;
         days_to_hatch = dth;
     }
-
+    @Override
+    public String toString() {
+        return "Incubator {" +
+               "newborn=" + (newborn != null ? newborn.toString() : "null") + ", " +
+               "temp='" + temp + '\'' + ", " +
+               "days_to_hatch='" + days_to_hatch + '\'' +
+               '}';
+    }
+    
 
 }

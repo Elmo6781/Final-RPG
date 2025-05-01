@@ -8,10 +8,16 @@ public class Paddock extends Park{
         dinosaur = D;
         supervisor = s;
         security_level = sl;
-
-
-
     }
+    @Override
+    public String toString() {
+        return "Paddock {" +
+               "dinosaur=" + (dinosaur != null ? dinosaur.toString() : "null") + ", " +
+               "supervisor='" + supervisor + '\'' + ", " +
+               "security_level='" + security_level + '\'' +
+               '}';
+    }
+    
     
 
 }

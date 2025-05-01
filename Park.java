@@ -1,13 +1,9 @@
 public class Park{
     private Park[][] finalPark;
+    private boolean visited;
 
-    public Park(){
-        finalPark = new Park[7][7];
+    public void hasVisited(){visited = true;}
+    public boolean getVisited(){return  visited;}
 
-    }
 
-    public Park(int x, int y){
-        finalPark = new Park[x][y];
-    } 
-    
 }

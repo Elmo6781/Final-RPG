@@ -12,7 +12,7 @@ public class Carnivore extends Dino{
             "🕰 Time Range: " + min_ma + " to " + max_ma + " million years ago" + "\n";
      }
      public void addedtoDatabse(){
-          System.out.println("A carnivore has been exported to the map");
+          System.out.println("A carnivore has been exported to the map!!!!");
      }
 
 }
