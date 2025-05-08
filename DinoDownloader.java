@@ -2,17 +2,9 @@ import java.io.*;
 import java.util.*;
 
 public class DinoDownloader {
-    public static void main(String[] args) {
-        String filePath = "/workspaces/Final-RPG/dinosaurs.csv"; // Change to your CSV file path
-        String[][] data = readCSV(filePath);
 
-        // Print the 2D array
-        for (String[] row : data) {
-            System.out.println(Arrays.toString(row));
-        }
-    }
 
-    public static String[][] readCSV(String filePath) {
+    public  String[][] readCSV(String filePath) {
         List<String[]> lines = new ArrayList<>();
 
         try (BufferedReader br = new BufferedReader(new FileReader(filePath))) {
@@ -31,7 +23,8 @@ public class DinoDownloader {
         for (int i = 0; i < lines.size(); i++) {
             result[i] = lines.get(i);
         }
-
+        System.out.println(result.length);
+        System.out.println(result[0][10]);
         return result;
     }
 }

@@ -1,8 +1,6 @@
-public class Dino{
-  protected String age;
+public class iDino{
   protected String occurrence_no;
-  protected String name;
-  protected String era; 
+  protected String name; 
   protected String diet;
   protected String type;
   protected String length_m;
@@ -17,12 +15,11 @@ public class Dino{
 
 
   // constructor 
-  public Dino(String age, String occurrence_no, String name, String era, String diet, String type, String length_m,
+  public Dino( String occurrence_no, String name, String diet, String type, String length_m,
 		String max_ma, String min_ma, String region, String lng, String lat, String class1, String family) {
-	this.age = age;
+
 	this.occurrence_no = occurrence_no;
 	this.name = name;
-	this.era = era;
 	this.diet = diet;
 	this.type = type;
 	this.length_m = length_m;
@@ -41,10 +38,10 @@ public class Dino{
   {
     DinoDownloader useTest = new DinoDownloader();
     String[][] database = useTest.readCSV("/workspaces/Final-RPG/dinosaurs.csv");
-    Dino[] finalList = new Dino[database.length];
-    for(int i = 0; i < database.length; i++)
+    Dino[] finalList = new Dino[database.length- 1];
+    for(int i = 1; i < finalList.length; i++)
     {
-      finalList[i] = new Dino("9", database[i][0], database[i][1], database[i][2], database[i][3], database[i][4], database[i][5], database[i][6], database[i][7], database[i][8], database[i][9], database[i][10], database[i][11], database[i][12]);
+      finalList[i-1] = new Dino(database[i][0], database[i][1], database[i][2], database[i][3], database[i][4], database[i][5], database[i][6], database[i][7], database[i][8], database[i][9], database[i][10], database[i][11]);
     }
   
 
@@ -57,15 +54,6 @@ public class Dino{
 
 
 
-  public String getAge() {
-	return age;
-  }
-
-
-
-  public void setAge(String age) {
-	this.age = age;
-  }
 
 
 
@@ -93,15 +81,6 @@ public class Dino{
 
 
 
-  public String getEra() {
-	return era;
-  }
-
-
-
-  public void setEra(String era) {
-	this.era = era;
-  }
 
 
 
@@ -228,8 +207,6 @@ public String toString() {
     return "🦕 Dino Information 🦖\n" +
            "------------------------\n" +
            "Name: " + name + "\n" +
-           "Age: " + age + "\n" +
-           "Era: " + era + "\n" +
            "Diet: " + diet + "\n" +
            "Type: " + type + "\n" +
            "Length (m): " + length_m + "\n" +
