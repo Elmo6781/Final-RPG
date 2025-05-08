@@ -6,7 +6,7 @@ public class Herbivore extends Dino{
             "🦖 Name: " + name + "\n" +
             "🌍 Region: " + region + "[Longitude: " + lng + " Latitude: " + lat + "]" + "\n" +
             "📏 Length: " + length_m + "\n" +
-            "🦴 Type: " + type + " | Class: " + dinoClass + " | Family: " + family + "\n" +
+            "🦴 Type: " + type + " | Class: " + dinoClass +  "\n" +
             "🍽 Diet: " + diet + "\n" +
             "🕰 Time Range: " + min_ma + " to " + max_ma + " million years ago" + "\n";
      }

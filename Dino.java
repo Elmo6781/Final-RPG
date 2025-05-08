@@ -1,4 +1,4 @@
-public class iDino{
+public class Dino{
   protected String occurrence_no;
   protected String name; 
   protected String diet;
@@ -17,7 +17,6 @@ public class iDino{
   // constructor 
   public Dino( String occurrence_no, String name, String diet, String type, String length_m,
 		String max_ma, String min_ma, String region, String lng, String lat, String class1, String family) {
-
 	this.occurrence_no = occurrence_no;
 	this.name = name;
 	this.diet = diet;
@@ -30,7 +29,7 @@ public class iDino{
 	this.lat = lat;
 	dinoClass = class1;
 	this.family = family;
-  }
+}
 
   public Dino(){}
 

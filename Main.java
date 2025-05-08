@@ -43,7 +43,7 @@ public class Main{
 
         System.out.println("Intialising park.....................");
         System.out.println("");
-         System.out.println("");
+        System.out.println("");
         System.out.println("");
         System.out.println("");
         System.out.println("");
@@ -69,21 +69,21 @@ public class Main{
 
                        if (detect.equals("carnivorous"))
                        { 
-                        check = new Carnivore(data[random_Dino][0], data[random_Dino][1], data[random_Dino][2], data[random_Dino][3], data[random_Dino][4], data[random_Dino][5], data[random_Dino][6], data[random_Dino][7], data[random_Dino][8], data[random_Dino][9], data[random_Dino][10], data[random_Dino][11]);
+                        check = new Carnivore(data[random_Dino][0], data[random_Dino][1], data[random_Dino][2], data[random_Dino][3], data[random_Dino][4], data[random_Dino][5], data[random_Dino][6], data[random_Dino][7], data[random_Dino][8], data[random_Dino][9], data[random_Dino][10], data[random_Dino][10]);
                         check.addedtoDatabse();
                         game[i][j] = new Paddock(check, "Owen Grady", "factor 5");
                         
                        }
                        else if (detect.equals("herbivorous"))
                        {
-                        check = new Herbivore(data[random_Dino][0], data[random_Dino][1], data[random_Dino][2], data[random_Dino][3], data[random_Dino][4], data[random_Dino][5], data[random_Dino][6], data[random_Dino][7], data[random_Dino][8], data[random_Dino][9], data[random_Dino][10], data[random_Dino][11]);
+                        check = new Herbivore(data[random_Dino][0], data[random_Dino][1], data[random_Dino][2], data[random_Dino][3], data[random_Dino][4], data[random_Dino][5], data[random_Dino][6], data[random_Dino][7], data[random_Dino][8], data[random_Dino][9], data[random_Dino][10], data[random_Dino][10]);
                         check.addedtoDatabse();
                         game[i][j] = new Paddock(check, "Owen Grady", "factor 5");
 
                        }
                        else if (detect.equals("omnivorous"))
                        {
-                        check = new Omnivores(data[random_Dino][0], data[random_Dino][1], data[random_Dino][2], data[random_Dino][3], data[random_Dino][4], data[random_Dino][5], data[random_Dino][6], data[random_Dino][7], data[random_Dino][8], data[random_Dino][9], data[random_Dino][10], data[random_Dino][11]);
+                        check = new Omnivores(data[random_Dino][0], data[random_Dino][1], data[random_Dino][2], data[random_Dino][3], data[random_Dino][4], data[random_Dino][5], data[random_Dino][6], data[random_Dino][7], data[random_Dino][8], data[random_Dino][9], data[random_Dino][10], data[random_Dino][10]);
                         check.addedtoDatabse();
                         game[i][j] = new Paddock(check, "Owen Grady", "factor 5");
 
@@ -98,21 +98,21 @@ public class Main{
 
                        if (detect.equals("carnivorous"))
                        { 
-                        check = new Carnivore(data[random_Dino][0], data[random_Dino][1], data[random_Dino][2], data[random_Dino][3], data[random_Dino][4], data[random_Dino][5], data[random_Dino][6], data[random_Dino][7], data[random_Dino][8], data[random_Dino][9], data[random_Dino][10], data[random_Dino][11]);
+                        check = new Carnivore(data[random_Dino][0], data[random_Dino][1], data[random_Dino][2], data[random_Dino][3], data[random_Dino][4], data[random_Dino][5], data[random_Dino][6], data[random_Dino][7], data[random_Dino][8], data[random_Dino][9], data[random_Dino][10], data[random_Dino][10]);
                         check.addedtoDatabse();
                         game[i][j] = new Incubator(check, "45", "22");
                         
                        }
                        else if (detect.equals("herbivorous"))
                        {
-                        check = new Herbivore(data[random_Dino][0], data[random_Dino][1], data[random_Dino][2], data[random_Dino][3], data[random_Dino][4], data[random_Dino][5], data[random_Dino][6], data[random_Dino][7], data[random_Dino][8], data[random_Dino][9], data[random_Dino][10], data[random_Dino][11]);
+                        check = new Herbivore(data[random_Dino][0], data[random_Dino][1], data[random_Dino][2], data[random_Dino][3], data[random_Dino][4], data[random_Dino][5], data[random_Dino][6], data[random_Dino][7], data[random_Dino][8], data[random_Dino][9], data[random_Dino][10], data[random_Dino][10]);
                         check.addedtoDatabse();
                         game[i][j] = new Incubator(check, "45", "22");
 
                        }
                        else if (detect.equals("omnivorous"))
                        {
-                        check = new Omnivores(data[random_Dino][0], data[random_Dino][1], data[random_Dino][2], data[random_Dino][3], data[random_Dino][4], data[random_Dino][5], data[random_Dino][6], data[random_Dino][7], data[random_Dino][8], data[random_Dino][9], data[random_Dino][10], data[random_Dino][11]);
+                        check = new Omnivores(data[random_Dino][0], data[random_Dino][1], data[random_Dino][2], data[random_Dino][3], data[random_Dino][4], data[random_Dino][5], data[random_Dino][6], data[random_Dino][7], data[random_Dino][8], data[random_Dino][9], data[random_Dino][10], data[random_Dino][10]);
                         check.addedtoDatabse();
                         game[i][j] = new Incubator(check, "45", "22");
 
