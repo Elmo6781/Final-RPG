@@ -23,13 +23,6 @@ public class Main{
         String[] testSubjects = {"P", "I", "S", "R"};
 
 
-
-        ArrayList<String> trainers = new ArrayList<>();
-        trainers.add("Owen Grady");
-        trainers.add("Ash Ketchum");
-        trainers.add("Lawrence");
-
-
         
         Create translatePark = new Create(new String[25][25], testSubjects);
         DinoDownloader statsSheet = new DinoDownloader();
@@ -51,7 +44,6 @@ public class Main{
 
 
         String[][] data = statsSheet.readCSV("/workspaces/Final-RPG/dinosaurs.csv");
-        System.out.println(data[0].length);
         String[][] arrayToBeTranslated = translatePark.PopulateArray();
         String detect;
         int random_Dino;
@@ -87,6 +79,11 @@ public class Main{
                         check.addedtoDatabse();
                         game[i][j] = new Paddock(check, "Owen Grady", "factor 5");
 
+                       }
+                       else{
+                        check = new Carnivore(data[random_Dino][0], data[random_Dino][1], data[random_Dino][2], data[random_Dino][3], data[random_Dino][4], data[random_Dino][5], data[random_Dino][6], data[random_Dino][7], data[random_Dino][8], data[random_Dino][9], data[random_Dino][10], data[random_Dino][10]);
+                        check.addedtoDatabse();
+                        game[i][j] = new Paddock(check, "Owen Grady", "factor 5");
                        }
 
 
@@ -142,11 +139,8 @@ public class Main{
         int positionY = 0;
         double numSpotsVisited = 0.0;
         double percentageCovered = 0.0;
-        // write a program that uses variable position x to move left and right, poistion y to move up and down 
-        // The intial position is [0,0]   ask for user input 1 for up 2 for down 3 for left and 4 for right
-        // watches out for put of bound err0rs
+
         translatePark.printPark(arrayToBeTranslated);
-        String lastTile = arrayToBeTranslated[0][0]; // Save what was at the initial position
         arrayToBeTranslated[positionY][positionX] = "X"; // Mark starting position
 
         System.out.println("Welcome to Jurrasic World");
@@ -155,24 +149,24 @@ public class Main{
         boolean gameRunning = true;
         while (gameRunning) 
         {
+            System.out.println();
             System.out.println("Enter 1 to move left, 2 to move right, 3 to move down, 4 to move up and enter 5 to stop");
-            int response = Integer.parseInt(in.nextLine());
+            String response = in.nextLine();
             if(percentageCovered >= 100){
                 System.out.println("You've explored the entire map!");
                 gameRunning = false;
             }
-            if (response !=1 && response !=2 && response !=3 && response !=4 && response!=5)
+            if (!response.equals("1") && !response.equals("2") && !response.equals("3") && !response.equals("4") && !response.equals("5"))
             { 
                 System.out.println("Invalid input, try again ");
-                System.out.println("Enter 1 to move left, 2 to move right, 3 to move down, 4 to move up and enter 5 to stop");
 
             }
-            else if(response == 5){
+            else if(response.equals("5")){
 
                 System.out.println("Hope you had fun! Bye!");
                 gameRunning = false;
             }
-            else if (response == 1)
+            else if (response.equals("1"))
                 {
                     if ((positionX -1) <0){
                         System.out.println("Invalid movement, try again ");
@@ -181,28 +175,37 @@ public class Main{
                         positionX -= 1; 
                         if(arrayToBeTranslated[positionY][positionX] == null){
                             arrayToBeTranslated[positionY][positionX] = "X";
+                            System.out.println();
+                            System.out.println();
                             translatePark.printPark(arrayToBeTranslated);
                             numSpotsVisited++;
+                            System.out.println();
                             percentageCovered = (numSpotsVisited / 625) * 100;
                             System.out.println("Aw man there's nothing here... :(" + "\n" + "Percentage covered: " + percentageCovered + "%");
                         }
                         else if(arrayToBeTranslated[positionY][positionX].equals("X")){
+                            System.out.println();
+                            System.out.println();
                             translatePark.printPark(arrayToBeTranslated);
+                            System.out.println();
                             System.out.println("You've visited here already!");
                         }      
                         else if(game[positionY][positionX].getIdentity().equals("paddock") || game[positionY][positionX].getIdentity().equals("incubator") || game[positionY][positionX].getIdentity().equals("ride") || game[positionY][positionX].getIdentity().equals("security")){
                             arrayToBeTranslated[positionY][positionX] = "X";
+                            System.out.println();
+                            System.out.println();
                             translatePark.printPark(arrayToBeTranslated);
                             numSpotsVisited++;
                             percentageCovered = (numSpotsVisited / 625) * 100;
                             System.out.println(game[positionY][positionX].toString());
+                            System.out.println();
                             System.out.println("Percentage covered: " + percentageCovered + "%");
                             
                         }
                         
                     }
                 }
-                else if (response == 2)
+                else if (response.equals("2"))
                 {
                     if ((positionX +1) >  game[0].length - 1){
                         System.out.println("Invalid movement, try again ");
@@ -212,27 +215,36 @@ public class Main{
                         positionX ++;
                         if(arrayToBeTranslated[positionY][positionX] == null){
                             arrayToBeTranslated[positionY][positionX] = "X";
+                            System.out.println();
+                            System.out.println();
                             translatePark.printPark(arrayToBeTranslated);
                             numSpotsVisited++;
                             percentageCovered = (numSpotsVisited / 625) * 100;
+                            System.out.println();
                             System.out.println("Aw man there's nothing here... :(" + "\n" + "Percentage covered: " + percentageCovered + "%");
                         }
                         else if(arrayToBeTranslated[positionY][positionX].equals("X")){
+                            System.out.println();
+                            System.out.println();
                             translatePark.printPark(arrayToBeTranslated);
+                            System.out.println();
                             System.out.println("You've visited here already!");
                         }      
                         else if(game[positionY][positionX].getIdentity().equals("paddock") || game[positionY][positionX].getIdentity().equals("incubator") || game[positionY][positionX].getIdentity().equals("ride") || game[positionY][positionX].getIdentity().equals("security")){
                             arrayToBeTranslated[positionY][positionX] = "X";
+                            System.out.println();
+                            System.out.println();
                             translatePark.printPark(arrayToBeTranslated);
                             numSpotsVisited++;
                             percentageCovered = (numSpotsVisited / 625) * 100;
                             System.out.println(game[positionY][positionX].toString());
+                            System.out.println();
                             System.out.println("Percentage covered: " + percentageCovered + "%");
                         }
                         
                     }
                 }
-                else if (response == 3)
+                else if (response.equals("3"))
                 {
                     if ((positionY +1) >  game.length -1){
                         System.out.println("Invalid movement, try again ");
@@ -241,13 +253,17 @@ public class Main{
                         positionY++;
                         if(arrayToBeTranslated[positionY][positionX] == null){
                             arrayToBeTranslated[positionY][positionX] = "X";
+                            System.out.println();
+                            System.out.println();
                             translatePark.printPark(arrayToBeTranslated);
                             numSpotsVisited++;
+                            System.out.println();
                             percentageCovered = (numSpotsVisited / 625) * 100;
                             System.out.println("Aw man there's nothing here... :(" + "\n" + "Percentage covered: " + percentageCovered + "%");
                         }
                         else if(arrayToBeTranslated[positionY][positionX].equals("X")){
                             translatePark.printPark(arrayToBeTranslated);
+                            System.out.println();
                             System.out.println("You've visited here already!");
                         }
                         else if(game[positionY][positionX].getIdentity().equals("paddock") || game[positionY][positionX].getIdentity().equals("incubator") || game[positionY][positionX].getIdentity().equals("ride") || game[positionY][positionX].getIdentity().equals("security")){
@@ -256,12 +272,13 @@ public class Main{
                             numSpotsVisited++;
                             percentageCovered = (numSpotsVisited / 625) * 100;
                             System.out.println(game[positionY][positionX].toString());
+                            System.out.println();
                             System.out.println("Percentage covered: " + percentageCovered + "%");
                         }
                     
                     }
                 }
-                else if (response == 4)
+                else if (response.equals("4"))
                 {
                     if ((positionY -1) <0){
                         System.out.println("Invalid movement, try again ");
@@ -274,10 +291,12 @@ public class Main{
                             translatePark.printPark(arrayToBeTranslated);
                             numSpotsVisited++;
                             percentageCovered = (numSpotsVisited / 625) * 100;
+                            System.out.println();
                             System.out.println("Aw man there's nothing here... :(" + "\n" + "Percentage covered: " + percentageCovered + "%");
                         }
                         else if(arrayToBeTranslated[positionY][positionX].equals("X")){
                             translatePark.printPark(arrayToBeTranslated);
+                            System.out.println();
                             System.out.println("You've visited here already!");
                         }      
                         else if(game[positionY][positionX].getIdentity().equals("paddock") || game[positionY][positionX].getIdentity().equals("incubator") || game[positionY][positionX].getIdentity().equals("ride") || game[positionY][positionX].getIdentity().equals("security")){
@@ -286,6 +305,7 @@ public class Main{
                             numSpotsVisited++;
                             percentageCovered = (numSpotsVisited / 625) * 100;
                             System.out.println(game[positionY][positionX].toString());
+                            System.out.println();
                             System.out.println("Percentage covered: " + percentageCovered + "%");
                         }
                         

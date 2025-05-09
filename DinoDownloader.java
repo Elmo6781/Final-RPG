@@ -23,8 +23,6 @@ public class DinoDownloader {
         for (int i = 0; i < lines.size(); i++) {
             result[i] = lines.get(i);
         }
-        System.out.println(result.length);
-        System.out.println(result[0][10]);
         return result;
     }
 }

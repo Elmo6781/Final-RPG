@@ -15,11 +15,13 @@ public class Rides extends Park {
 
     @Override
     public String toString() {
+        System.out.println();
+        System.out.println();
         return "Rides {" +
-               "rideName='" + rideName + '\'' +
-               ", rideType='" + rideType + '\'' +
-               ", minHeightRequirement=" + minHeightRequirement + " cm" +
-               ", isOperational=" + isOperational +
+               "rideName='" + rideName + '\n' +
+               "rideType='" + rideType + '\n' +
+               "minHeightRequirement=" + minHeightRequirement + " cm" + "\n" +
+               "isOperational=" + isOperational +
                '}';
     }
     public String getIdentity(){
