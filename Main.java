@@ -138,14 +138,10 @@ public class Main{
             }
         }
 
-        
-        /*
-        boolean movement = false;
-        boolean valid = false;
-        boolean exit = false;
         int positionX = 0;
         int positionY = 0;
-        int numSpotsVisited = 0;
+        double numSpotsVisited = 0.0;
+        double percentageCovered = 0.0;
         // write a program that uses variable position x to move left and right, poistion y to move up and down 
         // The intial position is [0,0]   ask for user input 1 for up 2 for down 3 for left and 4 for right
         // watches out for put of bound err0rs
@@ -154,108 +150,156 @@ public class Main{
         arrayToBeTranslated[positionY][positionX] = "X"; // Mark starting position
 
         System.out.println("Welcome to Jurrasic World");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("");
-        System.out.println("");
         System.out.println("You start at the top left corner of the map ");
 
-        while (!exit)
-        {
-            System.out.println("");
-            System.out.println("");
-            System.out.println("Enter 1 to move left, 2 to move right, 3 to move up, 4 to move down");
-            String move = in.nextLine();
-            while (!movement){
-                 while (!valid){
-                      if (!move.equals("1") && !move.equals("2") && !move.equals("3") && !move.equals("4"))
-                      {
-                         System.out.println("That's an invalid input beacuse you response must be an integer 1, 2,3 or 4");
-                         System.out.println("try again");
-                        move = in.nextLine();
-                       }
-                } 
-                
-            }
-
-
-        }
-
-
-        
-       /*  boolean gameRunning = true;
+        boolean gameRunning = true;
         while (gameRunning) 
         {
             System.out.println("Enter 1 to move left, 2 to move right, 3 to move down, 4 to move up and enter 5 to stop");
             int response = Integer.parseInt(in.nextLine());
-            while (response !=1 || response !=2 || response !=3|| response !=4 | response!=5)
+            if(percentageCovered >= 100){
+                System.out.println("You've explored the entire map!");
+                gameRunning = false;
+            }
+            if (response !=1 && response !=2 && response !=3 && response !=4 && response!=5)
             { 
                 System.out.println("Invalid input, try again ");
                 System.out.println("Enter 1 to move left, 2 to move right, 3 to move down, 4 to move up and enter 5 to stop");
-                response = Integer.parseInt(in.nextLine());
 
             }
-            while(movement)
-            {
-                if (response == 1)
+            else if(response == 5){
+
+                System.out.println("Hope you had fun! Bye!");
+                gameRunning = false;
+            }
+            else if (response == 1)
                 {
                     if ((positionX -1) <0){
                         System.out.println("Invalid movement, try again ");
-                        System.out.println("Enter 1 to move left, 2 to move right, 3 to move down, 4 to move up and enter 5 to stop");
-                        response = Integer.parseInt(in.nextLine());
-
                     }
-                    else {positionX -= 1;}
+                    else {
+                        positionX -= 1; 
+                        if(arrayToBeTranslated[positionY][positionX] == null){
+                            arrayToBeTranslated[positionY][positionX] = "X";
+                            translatePark.printPark(arrayToBeTranslated);
+                            numSpotsVisited++;
+                            percentageCovered = (numSpotsVisited / 625) * 100;
+                            System.out.println("Aw man there's nothing here... :(" + "\n" + "Percentage covered: " + percentageCovered + "%");
+                        }
+                        else if(arrayToBeTranslated[positionY][positionX].equals("X")){
+                            translatePark.printPark(arrayToBeTranslated);
+                            System.out.println("You've visited here already!");
+                        }      
+                        else if(game[positionY][positionX].getIdentity().equals("paddock") || game[positionY][positionX].getIdentity().equals("incubator") || game[positionY][positionX].getIdentity().equals("ride") || game[positionY][positionX].getIdentity().equals("security")){
+                            arrayToBeTranslated[positionY][positionX] = "X";
+                            translatePark.printPark(arrayToBeTranslated);
+                            numSpotsVisited++;
+                            percentageCovered = (numSpotsVisited / 625) * 100;
+                            System.out.println(game[positionY][positionX].toString());
+                            System.out.println("Percentage covered: " + percentageCovered + "%");
+                            
+                        }
+                        
+                    }
                 }
                 else if (response == 2)
                 {
                     if ((positionX +1) >  game[0].length - 1){
                         System.out.println("Invalid movement, try again ");
-                        System.out.println("Enter 1 to move left, 2 to move right, 3 to move down, 4 to move up and enter 5 to stop");
-                        response = Integer.parseInt(in.nextLine());
 
                     }
-                    else {positionX ++;}
+                    else {
+                        positionX ++;
+                        if(arrayToBeTranslated[positionY][positionX] == null){
+                            arrayToBeTranslated[positionY][positionX] = "X";
+                            translatePark.printPark(arrayToBeTranslated);
+                            numSpotsVisited++;
+                            percentageCovered = (numSpotsVisited / 625) * 100;
+                            System.out.println("Aw man there's nothing here... :(" + "\n" + "Percentage covered: " + percentageCovered + "%");
+                        }
+                        else if(arrayToBeTranslated[positionY][positionX].equals("X")){
+                            translatePark.printPark(arrayToBeTranslated);
+                            System.out.println("You've visited here already!");
+                        }      
+                        else if(game[positionY][positionX].getIdentity().equals("paddock") || game[positionY][positionX].getIdentity().equals("incubator") || game[positionY][positionX].getIdentity().equals("ride") || game[positionY][positionX].getIdentity().equals("security")){
+                            arrayToBeTranslated[positionY][positionX] = "X";
+                            translatePark.printPark(arrayToBeTranslated);
+                            numSpotsVisited++;
+                            percentageCovered = (numSpotsVisited / 625) * 100;
+                            System.out.println(game[positionY][positionX].toString());
+                            System.out.println("Percentage covered: " + percentageCovered + "%");
+                        }
+                        
+                    }
                 }
                 else if (response == 3)
                 {
                     if ((positionY +1) >  game.length -1){
                         System.out.println("Invalid movement, try again ");
-                        System.out.println("Enter 1 to move left, 2 to move right, 3 to move down, 4 to move up and enter 5 to stop");
-                        response = Integer.parseInt(in.nextLine());
-
                     }
-                    else{positionY++;}
+                    else{
+                        positionY++;
+                        if(arrayToBeTranslated[positionY][positionX] == null){
+                            arrayToBeTranslated[positionY][positionX] = "X";
+                            translatePark.printPark(arrayToBeTranslated);
+                            numSpotsVisited++;
+                            percentageCovered = (numSpotsVisited / 625) * 100;
+                            System.out.println("Aw man there's nothing here... :(" + "\n" + "Percentage covered: " + percentageCovered + "%");
+                        }
+                        else if(arrayToBeTranslated[positionY][positionX].equals("X")){
+                            translatePark.printPark(arrayToBeTranslated);
+                            System.out.println("You've visited here already!");
+                        }
+                        else if(game[positionY][positionX].getIdentity().equals("paddock") || game[positionY][positionX].getIdentity().equals("incubator") || game[positionY][positionX].getIdentity().equals("ride") || game[positionY][positionX].getIdentity().equals("security")){
+                            arrayToBeTranslated[positionY][positionX] = "X";
+                            translatePark.printPark(arrayToBeTranslated);
+                            numSpotsVisited++;
+                            percentageCovered = (numSpotsVisited / 625) * 100;
+                            System.out.println(game[positionY][positionX].toString());
+                            System.out.println("Percentage covered: " + percentageCovered + "%");
+                        }
+                    
+                    }
                 }
                 else if (response == 4)
                 {
                     if ((positionY -1) <0){
                         System.out.println("Invalid movement, try again ");
-                        System.out.println("Enter 1 to move left, 2 to move right, 3 to move down, 4 to move up and enter 5 to stop");
-                        response = Integer.parseInt(in.nextLine());
 
                     }
-                    else{positionY--;}
+                    else{
+                        positionY--;
+                        if(arrayToBeTranslated[positionY][positionX] == null){
+                            arrayToBeTranslated[positionY][positionX] = "X";
+                            translatePark.printPark(arrayToBeTranslated);
+                            numSpotsVisited++;
+                            percentageCovered = (numSpotsVisited / 625) * 100;
+                            System.out.println("Aw man there's nothing here... :(" + "\n" + "Percentage covered: " + percentageCovered + "%");
+                        }
+                        else if(arrayToBeTranslated[positionY][positionX].equals("X")){
+                            translatePark.printPark(arrayToBeTranslated);
+                            System.out.println("You've visited here already!");
+                        }      
+                        else if(game[positionY][positionX].getIdentity().equals("paddock") || game[positionY][positionX].getIdentity().equals("incubator") || game[positionY][positionX].getIdentity().equals("ride") || game[positionY][positionX].getIdentity().equals("security")){
+                            arrayToBeTranslated[positionY][positionX] = "X";
+                            translatePark.printPark(arrayToBeTranslated);
+                            numSpotsVisited++;
+                            percentageCovered = (numSpotsVisited / 625) * 100;
+                            System.out.println(game[positionY][positionX].toString());
+                            System.out.println("Percentage covered: " + percentageCovered + "%");
+                        }
+                        
+                    }
                 }
 
             }
-            if (game[positionY][positionX] != null){
-                if(!game[positionY][positionX].getVisited())
-                {
-                    game[positionY][positionX].hasVisited();
-                    numSpotsVisited++;
-                    game[positionY][positionX].toString();
-                    System.out.println();
-                    System.out.println();
-                    System.out.println();
-                }
-            }..
+           
+            }
 
 
 
-        }*/
+        }
         
   
 
-}
-}
+
