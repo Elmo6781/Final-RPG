@@ -139,8 +139,10 @@ public class Main{
         }
 
         
-
+        /*
         boolean movement = false;
+        boolean valid = false;
+        boolean exit = false;
         int positionX = 0;
         int positionY = 0;
         int numSpotsVisited = 0;
@@ -152,8 +154,36 @@ public class Main{
         arrayToBeTranslated[positionY][positionX] = "X"; // Mark starting position
 
         System.out.println("Welcome to Jurrasic World");
+        System.out.println("");
+        System.out.println("");
+        System.out.println("");
+        System.out.println("");
+        System.out.println("You start at the top left corner of the map ");
+
+        while (!exit)
+        {
+            System.out.println("");
+            System.out.println("");
+            System.out.println("Enter 1 to move left, 2 to move right, 3 to move up, 4 to move down");
+            String move = in.nextLine();
+            while (!movement){
+                 while (!valid){
+                      if (!move.equals("1") && !move.equals("2") && !move.equals("3") && !move.equals("4"))
+                      {
+                         System.out.println("That's an invalid input beacuse you response must be an integer 1, 2,3 or 4");
+                         System.out.println("try again");
+                        move = in.nextLine();
+                       }
+                } 
+                
+            }
+
+
+        }
+
+
         
-        boolean gameRunning = true;
+       /*  boolean gameRunning = true;
         while (gameRunning) 
         {
             System.out.println("Enter 1 to move left, 2 to move right, 3 to move down, 4 to move up and enter 5 to stop");
@@ -223,7 +253,7 @@ public class Main{
 
 
 
-        }
+        }*/
         
   
 
