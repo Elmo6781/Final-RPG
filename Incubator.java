@@ -14,6 +14,9 @@ public class Incubator extends Park
     }
     @Override
     public String toString() {
+        System.out.println("");
+        System.out.println("");
+        System.out.println("");
         return "Incubator {" +
                "newborn=" + (newborn != null ? newborn.toString() : "null") + ", " +
                "temp='" + temp + '\'' + ", " +

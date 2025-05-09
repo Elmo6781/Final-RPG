@@ -4,6 +4,8 @@ public class Carnivore extends Dino{
         super(occurrence_no, name, diet, type, length_m, max_ma, min_ma, region, lng, lat, dinoClass, family);
     }
     public String toString(){
+        System.out.println();
+        System.out.println();
         return 
             "🦖 Name: " + name + "\n" +
             "🌍 Region: " + region + "[Longitude: " + lng + " Latitude: " + lat + "]" + "\n" +

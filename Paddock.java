@@ -13,6 +13,9 @@ public class Paddock extends Park{
     }
     @Override
     public String toString() {
+        System.out.println("");
+        System.out.println("");
+        System.out.println("");
         return "Paddock {" +
                "dinosaur=" + (dinosaur != null ? dinosaur.toString() : "null") + ", " +
                "supervisor='" + supervisor + '\'' + ", " +

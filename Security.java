@@ -13,6 +13,9 @@ public class Security extends Park {
 
     @Override
     public String toString() {
+        System.out.println("");
+        System.out.println("");
+        System.out.println("");
         return "🔐 Security Station Info 🔐\n" +
                "Officer on Duty: " + officerName + "\n" +
                "Security Level: " + securityLevel + "\n" +
