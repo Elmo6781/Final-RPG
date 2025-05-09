@@ -13,14 +13,10 @@ public class Paddock extends Park{
     }
     @Override
     public String toString() {
-<<<<<<< HEAD
-        System.out.println("");
-        System.out.println("");
-        System.out.println("");
-=======
+
         System.out.println();
         System.out.println();
->>>>>>> refs/remotes/origin/main
+
         return "Paddock {" +
                "dinosaur=" + (dinosaur != null ? dinosaur.toString() : "null") + "\n" +
                "supervisor='" + supervisor + '\n' +

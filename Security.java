@@ -13,14 +13,10 @@ public class Security extends Park {
 
     @Override
     public String toString() {
-<<<<<<< HEAD
-        System.out.println("");
-        System.out.println("");
-        System.out.println("");
-=======
+
         System.out.println();
         System.out.println();
->>>>>>> refs/remotes/origin/main
+
         return "🔐 Security Station Info 🔐\n" +
                "Officer on Duty: " + officerName + "\n" +
                "Security Level: " + securityLevel + "\n" +

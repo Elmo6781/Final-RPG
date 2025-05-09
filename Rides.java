@@ -15,16 +15,8 @@ public class Rides extends Park {
 
     @Override
     public String toString() {
-<<<<<<< HEAD
-        System.out.println("");
-        System.out.println("");
-        System.out.println("");
-        return "Rides {" +  '\n' +
-               "rideName='" + rideName + '\n' +  
-               ", rideType='" + rideType + '\n' +
-               ", minHeightRequirement=" + minHeightRequirement + " cm" +  '\n'+
-               ", isOperational=" + isOperational +
-=======
+
+
         System.out.println();
         System.out.println();
         return "Rides {" +
@@ -32,7 +24,7 @@ public class Rides extends Park {
                "rideType='" + rideType + '\n' +
                "minHeightRequirement=" + minHeightRequirement + " cm" + "\n" +
                "isOperational=" + isOperational +
->>>>>>> refs/remotes/origin/main
+
                '}';
     }
     public String getIdentity(){

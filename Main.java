@@ -151,7 +151,7 @@ public class Main{
                 System.out.println("You've explored the entire map!");
                 gameRunning = false;
             }
-            if (response !=1 && response !=2 && response !=3 && response !=4 && response!=5)
+            if (!response.equals("1") && !response.equals("2") && !response.equals("3")  && !response.equals("4")  && !response.equals("5") )
             { 
                 System.out.println("Invalid input, try again ");
 
