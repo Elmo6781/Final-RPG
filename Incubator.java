@@ -14,13 +14,10 @@ public class Incubator extends Park
     }
     @Override
     public String toString() {
-        System.out.println("");
-        System.out.println("");
-        System.out.println("");
         return "Incubator {" +
                "newborn=" + (newborn != null ? newborn.toString() : "null") + ", " +
-               "temp='" + temp + '\'' + ", " +
-               "days_to_hatch='" + days_to_hatch + '\'' +
+               "temp='" + temp + '\n' + 
+               "days_to_hatch='" + days_to_hatch +
                '}';
     }
     public String getIdentity(){

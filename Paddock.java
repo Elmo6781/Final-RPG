@@ -13,13 +13,18 @@ public class Paddock extends Park{
     }
     @Override
     public String toString() {
+<<<<<<< HEAD
         System.out.println("");
         System.out.println("");
         System.out.println("");
+=======
+        System.out.println();
+        System.out.println();
+>>>>>>> refs/remotes/origin/main
         return "Paddock {" +
-               "dinosaur=" + (dinosaur != null ? dinosaur.toString() : "null") + ", " +
-               "supervisor='" + supervisor + '\'' + ", " +
-               "security_level='" + security_level + '\'' +
+               "dinosaur=" + (dinosaur != null ? dinosaur.toString() : "null") + "\n" +
+               "supervisor='" + supervisor + '\n' +
+               "security_level='" + security_level +
                '}';
     }
     public String getIdentity(){
