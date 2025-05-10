@@ -80,6 +80,15 @@ public class Main{
                         game[i][j] = new Paddock(check, "Owen Grady", "factor 5");
 
                        }
+                       else 
+                       {
+                        check = new Omnivores(data[random_Dino][0], data[random_Dino][1], data[random_Dino][2], data[random_Dino][3], data[random_Dino][4], data[random_Dino][5], data[random_Dino][6], data[random_Dino][7], data[random_Dino][8], data[random_Dino][9], data[random_Dino][10], data[random_Dino][10]);
+                        check.addedtoDatabse();
+                        game[i][j] = new Incubator(check, "45", "22");
+
+
+
+                       }
 
 
 
@@ -107,6 +116,15 @@ public class Main{
                         check = new Omnivores(data[random_Dino][0], data[random_Dino][1], data[random_Dino][2], data[random_Dino][3], data[random_Dino][4], data[random_Dino][5], data[random_Dino][6], data[random_Dino][7], data[random_Dino][8], data[random_Dino][9], data[random_Dino][10], data[random_Dino][10]);
                         check.addedtoDatabse();
                         game[i][j] = new Incubator(check, "45", "22");
+
+                       }
+                       else 
+                       {
+                        check = new Omnivores(data[random_Dino][0], data[random_Dino][1], data[random_Dino][2], data[random_Dino][3], data[random_Dino][4], data[random_Dino][5], data[random_Dino][6], data[random_Dino][7], data[random_Dino][8], data[random_Dino][9], data[random_Dino][10], data[random_Dino][10]);
+                        check.addedtoDatabse();
+                        game[i][j] = new Incubator(check, "45", "22");
+
+
 
                        }
 
